@@ -1,0 +1,39 @@
+<script type="text/javascript">
+	
+	var usuario = {tipo:null, numero: null};
+	var computador = {tipo:null, numero: null};
+
+	usuario.tipo = prompt("Impar ou par ? ");
+	usuario.tipo = usuario.tipo.toLowerCase();
+
+if(usuario.tipo = "impar" || usuario.tipo == "par") {
+	usuario.numero = prompt("Qual é o seu numero ?");
+	if(usuario.tipo == "impar"){
+		computador.tipo = "par";
+	}else{
+		computador.tipo = "impar";
+	}	
+		computador.numero = Math.floor(Math.random() * 11); // 0 até 10
+
+		document.write("Dados do Game:" + "<br><br>");
+		document.write("Usuario: " + "Tipo " + usuario.tipo + " Número: " + usuario.numero + "<br>");
+		document.write("Computador: " + "Tipo " + computador.tipo + " Número: " + computador.numero + "<br>");
+
+	if ((parseInt(usuario.numero) + parseInt(computador.numero)) % 2 == 0 ) {
+		if(usuario.tipo == "par") {
+			document.write("Usuario Venceu!" + "<br>");		
+		}else{
+			document.write("Computador Venceu!" + "<br>");
+		}
+	}else{
+		if(usuario.tipo == "impar") {
+			document.write("Usuario Venceu!" + "<br>");		
+		}else{
+			document.write("Computador Venceu!" + "<br>");
+		}
+	}
+}else{
+  document.write("Resposta inválida! Responda impar ou par");
+}
+
+</script>

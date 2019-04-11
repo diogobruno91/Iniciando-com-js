@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	class Util {
+		static lista(lista){
+			let html = '<ul>';
+
+			for(let item of lista){
+				html += `
+				<li>${item}</li>
+
+				`;
+			}
+			html += '</u>';
+			return html;
+		}
+	}
+
+	document.write(Util.lista(["Laranja", "Limao", "Maça"]));
+</script>

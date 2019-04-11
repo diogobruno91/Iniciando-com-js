@@ -1,0 +1,40 @@
+<script type="text/javascript">
+	class Pagina {
+		constructor(titulo, descricao, conteudo){
+			this.titulo = titulo || ""; 
+			this.descricao = descricao || ""; 
+			this.conteudo = conteudo || ""; 
+		}
+		exibir() {
+			let html = ` 
+			<h1>${this.titulo}</h1>
+			<h2>${this.descricao}</h2>
+			<p>${this.conteudo}</p>
+
+			`;
+			document.write(html);
+		}
+		get html() {
+			let html = ` 
+			<h1>${this.titulo}</h1>
+			<h2>${this.descricao}</h2>
+			<p>${this.conteudo}</p>
+
+			`;
+			return html;
+		}
+	}
+	class HomePagina extends Pagina {
+		constructor(titulo, descricao, conteudo) {
+			super(titulo.toUppercase, descricao, conteudo);
+		}
+
+	}
+
+	var Home = new HomePagina('Home', 'Página Home', 'Destaques da Página');
+
+	console.log(Home);
+	//Home.exibir();
+
+	document.write(Home.html)
+</script>

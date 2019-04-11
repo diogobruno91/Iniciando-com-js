@@ -1,0 +1,33 @@
+<script type="text/javascript">
+	var lista = new Array();
+	var i = 0;
+	var add;
+
+	do{
+		let usuario = new Object();
+		usuario.nome = prompt("Digite seu nome:");
+		usuario.idade = prompt("Digite sua idade:");
+		lista[i] = usuario;
+		i++;
+		add = prompt("Adicionar outro usuário? (sim/não)")
+	}while(add == 'sim')
+
+	console.log(lista);
+
+	document.write("Maior de idade:" + "<br><hr>");
+
+	for(usuario of lista){
+		if(usuario.idade >= 18){
+		  document.write(usuario.nome+ " - " +usuario.idade+ "<br><hr>");
+		}
+	}
+
+	document.write("Menor de Idade:" + "<br><hr>");
+
+	for(let chave in lista){
+		if(lista[chave].idade < 18){
+		  document.write(lista[chave].nome+ " - " +lista[chave].idade+ "<br><hr>");
+		}
+	}
+
+</script>

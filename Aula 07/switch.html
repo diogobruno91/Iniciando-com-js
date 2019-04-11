@@ -1,0 +1,30 @@
+<script type="text/javascript">
+	
+	function calculadora(numA, numB, op){
+		switch(op){
+			case "somar":
+			 return numA + numB;
+			 break;
+
+			case "subtrair":
+			 return numA - numB;
+			 break;
+
+ 			case "multiplicar":
+			 return numA + numB;
+			 break;
+
+ 			case "dividir":
+			 return numA / numB;
+			 break;
+			 default:
+			  return "Esse operador não existe!";
+		}
+	}
+
+	document.write(calculadora(2,2,"somar") + "<br>");
+	document.write(calculadora(4,2,"subtrair") + "<br>");
+	document.write(calculadora(3,2,"multiplicar") + "<br>");
+	document.write(calculadora(10,5,"dividir") + "<br>");
+
+</script>

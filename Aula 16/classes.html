@@ -1,0 +1,23 @@
+<script type="text/javascript">
+	class Pagina {
+		constructor(titulo, descricao, conteudo){
+			this.titulo = titulo || ""; 
+			this.descricao = descricao || ""; 
+			this.conteudo = conteudo || ""; 
+		}
+		exibir() {
+			let html = ` 
+			<h1>${this.titulo}</h1>
+			<h2>${this.descricao}</h2>
+			<p>${this.conteudo}</p>
+
+			`;
+			document.write(html);
+		}
+	}
+
+	var Home = new Pagina('Home', 'Página Home', 'Destaques da Página');
+
+	console.log(Home);
+	Home.exibir();
+</script>
